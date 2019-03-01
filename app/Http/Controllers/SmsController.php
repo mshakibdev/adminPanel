@@ -23,9 +23,9 @@ class SmsController extends Controller
     {
         $numbers = DB::table('users')->pluck('phone');
     
-        onnorokom_sms(['message' => 'some text msg', 'mobile_number' => ['01521106352','01715376826']]);
+        onnorokom_sms(['message' => 'some text msg', 'mobile_number' => $numbers]);
         
-        return 'message sent';
+        return $numbers;
     
     }
     
