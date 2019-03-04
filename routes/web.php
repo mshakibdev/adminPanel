@@ -34,6 +34,6 @@
     
     
     //sms
-    Route::get('all-numbers','smsController@index');
+    Route::get('all-numbers','SmsController@index');
 
-    Route::get('sms/send/all','smsController@OnetoMany')->name('onetomany');
+    Route::get('sms/send/all','SmsController@OnetoMany')->name('onetomany');
