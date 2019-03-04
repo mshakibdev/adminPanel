@@ -23,16 +23,16 @@ class SmsController extends Controller
     {
         $numbers = DB::table('users')->pluck('phone');
     
-        onnorokom_sms(['message' => 'some text msg', 'mobile_number' => $numbers]);
+        return onnorokom_sms(['message' => 'some text msg', 'mobile_number' => $numbers]);
         
-        return $numbers;
+//         return $numbers;
     
     }
     
     public function OnetoOne()
     {
         
-        onnorokom_sms(['message' => 'some text msg', 'mobile_number' => '01918....']);
+        return onnorokom_sms(['message' => 'some text msg', 'mobile_number' => '01918....']);
     
     }
 }
